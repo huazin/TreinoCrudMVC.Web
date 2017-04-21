@@ -1,0 +1,42 @@
+﻿@model TreinoCrudMVC.Web.ViewModel.LivroViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EditoraId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Editora.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeneroId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Genero.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.LivroId }) |
+    @Html.ActionLink("Voltar para lista", "Index")
+</p>
